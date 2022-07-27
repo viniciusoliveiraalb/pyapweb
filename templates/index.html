@@ -1,37 +1,22 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatos</title>
-    <style>
-        body{
-            font-size: 1em;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: rgb(0, 72, 75);
-        }
+{% extends "base.html" %}
 
-        h1{
-            font-size: 2em;
-            font-family: 'Courier New', Courier, monospace;
-            color: rgb(159, 189, 216);
-        }
-        ul{
-            color: aliceblue;
-            list-style: square;
-        }
-        a{
-            color: brown;
-        }
-    </style>
-</head>
-<body>
-    <h1>Vinicius Oliveira de Albuquerque</h1>
-    <h2>Contatos</h2>
-    <ul>
-        <li><a href="#">eu@gmail.com</a></li>
-        <li>5592999999999</li>
-    </ul>
-</body>
-</html>
+{% block content %}
+{% for post in posts %}
+<article class="post">
+    <header>
+        <div>
+            <h1> {{post.title}} </h1>
+            <div class="about">
+                by {{ post.author }} on {{ post.created.strftime('%d/%b/%y')}}
+            </div>
+        </div>
+    </header>
+    <p class="body">
+        {{ post.body }}
+    </p>
+</article>
+{% if not loop.last %}
+<hr>
+{% endif %}
+{% endfor %}
+{% endblock %}
