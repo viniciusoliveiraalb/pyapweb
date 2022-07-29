@@ -6,7 +6,7 @@ html{
     padding: 1rem;
 }
 body{
-    max-width: 400px;
+    max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
 }
@@ -37,4 +37,20 @@ hr{
 .no-posts{
     font-style: italic;
     color: gray;
+}
+.content form{
+    max-width:  40%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.content label{
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.content input{
+    margin-bottom: 1em;
+
 }
