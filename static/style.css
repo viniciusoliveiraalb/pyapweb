@@ -1,24 +1,33 @@
-html { font-family: sans-serif; background: #eee; padding: 1rem;}
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+
+html { font-family: Arial, Helvetica, sans-serif; background: #eee; padding: 1rem;}
 body {max-width: 960px; margin: 0 auto; background: white;}
-h1 { font-family: serif; color: #377ba8;margin: 1rem 0;}
+h1 { font-family: "Oswald"; color: #00198a;margin: 1rem 0;}
 a {color: #377ba8;}
 hr {border: none; border-top: 1px solid lightgray;}
-nav { background: lightgray; display: flex; align-items: center; padding: 0 0.5rem;}
+nav { background: lightgray; display: flex; align-items: center; padding: 2 0.3rem; border-top-left-radius: 5px ;border-top-right-radius: 5px ;}
 nav h1 { font-size: 2em; flex: auto; margin: 0;}
 .content { padding: 0 1rem 1rem;}
+.post{ background-color: #377ba865; padding: 10px; border-radius: 5px; margin-top: 1em;}
 .post > header > div:first-of-type {flex: auto;}
 .post > header h1 {font-size: 1.5em; margin-bottom: 0;}
-.post .about {color: slategray;font-style: italic;}
+.post .about {color: slategray;font-style: italic; font-size: 0.8em;}
 .post .body {white-space: pre-line;}
 .content:last-child {margin-bottom: 0;}
 .no-posts{color: gray;font-style: italic;}
-.content form { width: 45%; margin: 1em auto;display: flex;flex-direction: column;}
+.content form { width: 230px; margin: 1em auto;display: flex;flex-direction: column;}
 .content label {font-weight: bold;margin-bottom: 0.5em;}
-.content input{margin-bottom: 1em;}
+.content input{margin-bottom: 1em; height:}
 input.danger {color: #cc2f2e;}
-input[type=submit] {align-self: start;min-width: 10em;}
-.flash {margin: 1em 0;padding: 1em;background: #cae6f6;border: 1px solid #377ba8;}
+input[type=submit] {align-self: start;min-width: 10em; margin: auto; color:#fff; background-color: #377ba8; border: none; padding: 10px; border-radius: 5px;}
+input[type=submit]:hover{ box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.212); cursor: pointer;}
+.flash {margin: 1em 0;padding: 1em;background: #f6caca;border: 1px solid #377ba8;}
 .content > header {border-bottom: 1px solid lightgray;display: flex;align-items: flex-end;}
-.content > header h1 {flex: auto;margin: 1rem 0 0.25rem 0;}
- nav ul  {display: flex; list-style: none; margin: 0; padding: 0; }
-nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; }
+.content > header h1 {margin: 1rem auto 0.25rem auto;}
+ nav ul  {display: flex; list-style: none; margin: 0; padding: 0; align-items: center; }
+nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem;}
+nav ul li a{ text-decoration: none; background-color: #377ba8; color: #fff; margin: 0 1px; border-radius: 5px; }
+nav ul li a:hover{ box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.226);}
+nav ul li a:active{ color: black; }
+nav ul li span{ font-family: "oswald" serif; font-size: 1.2em; font-weight: bolder; color: #377ba8; }
+textarea{ resize: none; height: 150px; margin-bottom: 1em;}

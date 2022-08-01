@@ -3,15 +3,13 @@
 {% block title %} New Post {% endblock %}
 
 {% block header %}
-    <h1> New Post </h1>
+    <h1> Novo post </h1>
 {% endblock %}
 
 {% block content %}
 <form method="POST">
-    <label for="title"> Title: </label>
-    <input id="title" name="title" required value="{{ request.form['title'] }}">
-    <label for="body">Body: </label>
-    <textarea id="body" name="body">{{ request.form['body'] }}</textarea>
-    <input type="submit" value="Post">
+    <input id="title" name="title" placeholder="Título" required value="{{ request.form['title'] }}">
+    <textarea id="body" name="body" placeholder="No que voce esta pensando?">{{ request.form['body'] }}</textarea>
+    <input type="submit" value="Publicar">
 </form>
 {% endblock %}
