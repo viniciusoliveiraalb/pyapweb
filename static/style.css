@@ -31,8 +31,3 @@ nav ul li a:hover{ box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.226);}
 nav ul li a:active{ color: black; }
 nav ul li span{ font-family: "oswald" serif; font-size: 1.2em; font-weight: bolder; color: #377ba8; }
 textarea{ resize: none; height: 150px; margin-bottom: 1em;}
-@media (max-width:320px){
-    body{
-        background: #d7ecfa;
-    }
-}
